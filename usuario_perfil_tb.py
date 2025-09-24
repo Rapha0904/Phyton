@@ -1,26 +1,31 @@
 import re
 
+print("--- Cadastro de Usuário ---")
 nome = input("Digite o nome do usuário: ")
 email = input("Digite o email: ")
 senha = input("Digite a senha: ")
-ddd = input("Digite o DDD: ")
-telefone = input("Digite o número de telefone: ")
+
+while True:
+    telefone_bruto = input("Digite o DDD e o número de telefone (ex: 41 99999-9999): ")
+    telefone_limpo = re.sub(r'\D', '', telefone_bruto)
+    
+    if len(telefone_limpo) == 11:
+        ddd = telefone_limpo[:2]
+        numero = telefone_limpo[2:]
+        telefone_formatado = f"{ddd}; {numero}"
+        break
+    else:
+        print("Número inválido. Por favor, digite 11 dígitos (2 para o DDD e 9 para o número).")
+
 caminho_foto = input("Digite o caminho da foto de perfil: ")
-
-# Remove todos os caracteres não numéricos do telefone e do DDD.
-ddd_limpo = re.sub(r'\D', '', ddd)
-telefone_limpo = re.sub(r'\D', '', telefone)
-
-# Combina o DDD e o número no formato "DDD; NUMERO".
-telefone_formatado = f"{ddd_limpo}; {telefone_limpo}"
 
 usuario = {
     "nome": nome,
     "email": email,
     "senha": senha,
-    "telefone_formatado": telefone_formatado,
+    "telefone": telefone_formatado,
     "caminho_foto": caminho_foto
 }
 
-print("Dados do usuário criados:")
+print("\nDados do usuário criados:")
 print(usuario)
