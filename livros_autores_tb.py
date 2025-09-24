@@ -1,8 +1,14 @@
+proximo_id = 1
+
 print("--- Relação entre Livro e Autor ---")
 id_livro = input("Digite o ID do livro: ")
 id_autor = input("Digite o ID do autor: ")
 
+id_livro_autor = proximo_id
+proximo_id += 1
+
 livros_autores = {
+    "id_livro_autor": id_livro_autor,
     "id_livro": id_livro,
     "id_autor": id_autor
 }
