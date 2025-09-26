@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial - Sistema de Leitura</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f5f7fa;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+      width: 250px;
+      background: #2c7a7b;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px;
+      margin: 5px 0;
+      display: block;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #319795;
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Barra superior */
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #fff;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .profile span {
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Conteúdo */
+    .content {
+      padding: 20px;
+    }
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Cards resumo */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #2c7a7b;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra lateral -->
+  <div class="sidebar">
+    <h2>📚 Sistema</h2>
+    <a href="#">🏠 Início</a>
+    <a href="cadatro_autores.html">✍️ Cadastro de Autores</a>
+    <a href="generos.html">🎭 Cadastro de Gêneros</a>
+    <a href="cadastro_livro.html">📖 Cadastro de Livros</a>
+    <a href="#">📝 Resenhas</a>
+    <a href="#">👥 Clubes de Leitura</a>
+    <a href="#">🎯 Metas de Leitura</a>
+    <a href="#">📔 Diário de Leitura</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="main-content">
+
+    <!-- Barra superior -->
+    <div class="topbar">
+      <div class="profile">
+        <img src="https://via.placeholder.com/40" alt="Foto de Perfil">
+        <span>Olá, Usuário</span>
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content">
+      <div class="header">
+        <h1>Bem-vindo ao Sistema de Leitura 📖</h1>
+        <p>Acompanhe seus livros, estabeleça metas e participe de clubes.</p>
+      </div>
+
+      <!-- Cards de resumo -->
+      <div class="cards">
+        <div class="card">
+          <h3>Livros Lidos</h3>
+          <p>12 concluídos</p>
+        </div>
+        <div class="card">
+          <h3>Páginas Lidas</h3>
+          <p>3.200 páginas</p>
+        </div>
+        <div class="card">
+          <h3>Meta Anual</h3>
+          <p>50 livros - 24% concluído</p>
+        </div>
+        <div class="card">
+          <h3>Clubes</h3>
+          <p>2 ativos</p>
+        </div>
+        <div class="card">
+          <h3>Resenhas</h3>
+          <p>8 escritas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
